@@ -1,0 +1,40 @@
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Hermes",
+    "apellidop":"Salazar",
+    "apellidom":"FlorCasanovaes",
+    "email":"hermes.salazar@uthh.edu.mx",
+    "password":"hermes",
+    "telefono":"7744552211"
+}
+###
+GET http://localhost:3000/api/moliendas HTTP/1.1
+###
+PUT http://localhost:3000/api/users/64077b735f3b111d3a26fba4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Hermes",
+    "apellidop":"Salazar",
+    "apellidom":"Casanova",
+    "email":"hermes.salazar@uthh.edu.mx",
+    "password":"hermes",
+    "telefono":"7744552211"
+}
+###
+POST http://localhost:3000/api/moliendas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"En grano"
+}
+###
+POST http://localhost:3000/api/presentacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "descripcion":"unidad",
+    "gramos":0
+}
