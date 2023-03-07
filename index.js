@@ -4,6 +4,7 @@ require('dotenv').config()
 const usersquema=require('./src/routes/users')
 const moliendasquema=require('./src/routes/molienda')
 const presentacionsquema=require('./src/routes/presentacion')
+const variedadsquema=require('./src/routes/variedad')
 
 const app =express()
 const port= process.env.port||3000
@@ -15,6 +16,8 @@ app.use(express.json())
 app.use('/api',usersquema)
 app.use('/api',moliendasquema)
 app.use('/api',presentacionsquema)
+app.use('/api',variedadsquema)
+
 app.get('/',(req,res)=>{
     res.json({"response":"esto es mmi primer servidor"})
 })
