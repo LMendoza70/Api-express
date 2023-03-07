@@ -5,9 +5,9 @@ Content-Type: application/json
     "nombre":"Hermes",
     "apellidop":"Salazar",
     "apellidom":"FlorCasanovaes",
-    "email":"hermes.salazar@uthh.edu.mx",
+    "email":"hermes.salazar@uthh.edu.m",
     "password":"hermes",
-    "telefono":"7744552211"
+    "telefono":"7744552218"
 }
 ###
 GET http://localhost:3000/api/variedad HTTP/1.1
