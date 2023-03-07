@@ -5,6 +5,7 @@ const usersquema=require('./src/routes/users')
 const moliendasquema=require('./src/routes/molienda')
 const presentacionsquema=require('./src/routes/presentacion')
 const variedadsquema=require('./src/routes/variedad')
+const productossquema=require('./src/routes/productos')
 
 const app =express()
 const port= process.env.port||3000
@@ -17,6 +18,7 @@ app.use('/api',usersquema)
 app.use('/api',moliendasquema)
 app.use('/api',presentacionsquema)
 app.use('/api',variedadsquema)
+app.use('/api',productossquema)
 
 app.get('/',(req,res)=>{
     res.json({"response":"esto es mmi primer servidor"})

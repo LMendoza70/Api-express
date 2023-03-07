@@ -10,7 +10,7 @@ Content-Type: application/json
     "telefono":"7744552211"
 }
 ###
-GET http://localhost:3000/api/moliendas HTTP/1.1
+GET http://localhost:3000/api/variedad HTTP/1.1
 ###
 PUT http://localhost:3000/api/users/64077b735f3b111d3a26fba4 HTTP/1.1
 Content-Type: application/json
@@ -53,3 +53,14 @@ Content-Type: application/json
     "proceso":"",
     "notas":""
 }
+###
+POST http://localhost:3000/api/productos HTTP/1.1
+Content-Type: application/json
+
+{
+    "precio":400,
+    "variedad":"64078c140352cd51427d22b7",
+    "presentacion":"640787d048d6b1f3ad7ea47e"
+}
+###
+GET http://localhost:3000/api/productos HTTP/1.1

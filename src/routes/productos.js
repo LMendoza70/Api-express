@@ -14,6 +14,8 @@ routerpr.post('/productos',(req,res)=>{
 //leer productos
 routerpr.get('/productos',(req,res)=>{
     esquema.find()
+    .populate('variedad')
+    .populate('presentacion')
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
@@ -22,6 +24,8 @@ routerpr.get('/productos',(req,res)=>{
 routerpr.get('/productos/:id',(req,res)=>{
     const {id}=req.params
     esquema.findById(id)
+    .populate('variedad')
+    .populate('presentacion')
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
