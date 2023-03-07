@@ -38,3 +38,18 @@ Content-Type: application/json
     "descripcion":"unidad",
     "gramos":0
 }
+###
+POST http://localhost:3000/api/variedad HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Molino manual plateado",
+    "descripcion":"Muele al instante tus granos de manera manual, la experiencia es extraordinaria. 45 gramos de capacidad. ¡Ajustable! Se entrega calibrado para el tipo de molienda deseado. 100 gramos de café de regalo.",
+    "variedad":"",
+    "puntiacion":"",
+    "productor":"",
+    "finca":"",
+    "altura":"",
+    "proceso":"",
+    "notas":""
+}
