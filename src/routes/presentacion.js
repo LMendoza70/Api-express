@@ -1,47 +1,47 @@
 const express=require('express')
-const esquema=require('../models/users')
+const esquema=require('../models/presentacion')
 
-const router=express.Router()
+const routerp=express.Router()
 
-//crear un usuario
-router.post('/users',(req,res)=>{
-    const us= esquema(req.body);
-    us.save()
+//crear presentacion
+routerp.post('/presentacion',(req,res)=>{
+    const pre= esquema(req.body);
+    pre.save()
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
 
-//leer usuarios
-router.get('/users',(req,res)=>{
+//leer presentacion
+routerp.get('/presentacion',(req,res)=>{
     esquema.find()
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
 
-//buscar usuario
-router.get('/users/:id',(req,res)=>{
+//buscar presentacion
+routerp.get('/presentacion/:id',(req,res)=>{
     const {id}=req.params
     esquema.findById(id)
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
 
-//actualizar usuario
-router.put('/users/:id',(req,res)=>{
+//actualizar presentacion
+routerp.put('/presentacion/:id',(req,res)=>{
     const{id}=req.params;
-    const{nombre,apellidop,apellidom,email,password,telefono}=req.body
+    const{descripcion,gramos}=req.body
     esquema
-    .updateOne({_id:id},{$set:{nombre,apellidop,apellidom,email,password,telefono}})
+    .updateOne({_id:id},{$set:{descripcion,gramos}})
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))
 })
 
-//eliminar usuario
-router.delete('/users/:id',(req,res)=>{
+//eliminar presentacion
+routerp.delete('/presentacion/:id',(req,res)=>{
     const{id}=req.params;
     esquema.deleteOne({_id:id})
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
 
-module.exports=router
+module.exports=routerp
