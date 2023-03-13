@@ -26,6 +26,15 @@ router.get('/users/:id',(req,res)=>{
     .catch(error=>res.json({message:error}))
 })
 
+//busqueda por elmail
+router.get('/users/email/:email',(req,res)=>{
+    const {email} = req.params
+    esquema.findOne({ email })
+      .then(data => res.json(data))
+      .catch(error => res.json({message:error}))
+  })
+  
+
 //actualizar usuario
 router.put('/users/:id',(req,res)=>{
     const{id}=req.params;
