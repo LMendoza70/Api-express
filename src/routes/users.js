@@ -43,5 +43,15 @@ router.delete('/users/:id',(req,res)=>{
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
+/*
+const paletaCafeteria = {
+    marronOscuro: '#8B4513',
+    beige: '#F5DEB3',
+    crema: '#FFFDD0',
+    gris: '#808080',
+    rojoOscuro: '#8B0000',
+    verdeOscuro: '#006400'
+  };*/
+  
 
 module.exports=router
