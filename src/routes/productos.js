@@ -19,6 +19,14 @@ routerpr.get('/productos',(req,res)=>{
     .then(data=>res.json(data))
     .catch(error=>res.json({message:error}))
 })
+//leer productos para home
+routerpr.get('/productos/home',(req,res)=>{
+    esquema.find().limit(3)
+    .populate('variedad')
+    .populate('presentacion')
+    .then(data=>res.json(data))
+    .catch(error=>res.json({message:error}))
+})
 
 //buscar producto
 routerpr.get('/productos/:id',(req,res)=>{
