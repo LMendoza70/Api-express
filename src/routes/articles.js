@@ -37,7 +37,7 @@ routera.put('/articles/:id',(req,res)=>{
 })
 
 //eliminar articulo
-router.delete('/articles/:id',(req,res)=>{
+routera.delete('/articles/:id',(req,res)=>{
     const{id}=req.params;
     esquema.deleteOne({_id:id})
     .then(data=>res.json(data))
